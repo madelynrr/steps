@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -5,6 +7,8 @@ const messages = [
 ];
 
 export default function App() {
+  const [step, setStep] = useState(1);
+
   return (
     <div className="steps">
       <div className="numbers">
