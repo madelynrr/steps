@@ -10,11 +10,15 @@ export default function App() {
   const [step, setStep] = useState(1);
 
   function handlePrevious() {
-    setStep((s) => s - 1);
+    if (step > 1) {
+      setStep((s) => s - 1);
+    }
   }
 
   function handleNext() {
-    setStep((s) => s + 1);
+    if (step < messages.length) {
+      setStep((s) => s + 1);
+    }
   }
 
   return (
